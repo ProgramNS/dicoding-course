@@ -261,13 +261,15 @@ document.getElementById('bookForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const title = document.getElementById('bookFormTitle').value;
     const author = document.getElementById('bookFormAuthor').value;
-    const year = document.getElementById('bookFormYear').value;
+    const year = Number(document.getElementById('bookFormYear').value);
     const isComplete = document.getElementById('bookFormIsComplete').checked;
 
     const bookObject = generateObjectBooks(generateId(), title, author, year, isComplete);
 
+  
     if(bookObject !== null){
         bookItem.push(bookObject);
+        console.log(bookObject);
         Swal.fire({
             position: "top-end",
             icon: "success",
