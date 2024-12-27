@@ -1,0 +1,94 @@
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);   
+    display: flex;
+    flex: 1 1 300px;
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .card .card-body {
+    flex-grow: 1;
+  }
+  
+  .card .item-date {
+    color: #aaa;
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #4CAF50;
+  }
+  
+  .card p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .card .card-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  
+  .card button {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+  }
+  
+  .card button i {
+    margin-right: 5px;
+  }
+  
+  .card button.delete {
+    background-color: #f44336;
+  }
+  
+  .card button.archive {
+    background-color: #FFC107;
+  }
+  
+  .card button.delete::before {
+    content: "\f1f8"; /* Trash icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 5px;
+  }
+  
+  .card button.archive::before {
+    content: "\f187"; /* Archive icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 5px;
+  }
+  
+  .card button:hover {
+    background-color: #1976D2;
+  }
+  
+  .card button.delete:hover {
+    background-color: #d32f2f;
+  }
+  
+  .card button.archive:hover {
+    background-color: #e0a800;
+  }
+  
+  .card button:hover i {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+  }
